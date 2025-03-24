@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresa Nuevo Paciente</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ingresa Nuevo Paciente</h1>
+        <div class="user-info">
+            <span id="userName">Usuario: Juan Pérez</span>
+            <span id="userRole">Cargo: Médico</span>
+            <button id="loginButton">Iniciar Sesión</button>
+        </div>
+    </header>
+    <main>
+        <form id="new-patient-form">
+            <label for="firstName">Nombres:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            <label for="lastName1">Apellido Paterno:</label>
+            <input type="text" id="lastName1" name="lastName1" required>
+            <label for="lastName2">Apellido Materno:</label>
+            <input type="text" id="lastName2" name="lastName2" required>
+            <label for="rut">RUT:</label>
+            <input type="text" id="rut" name="rut" required>
+            <label for="fileNumber">N° Ficha:</label>
+            <input type="text" id="fileNumber" name="fileNumber" required>
+            <label for="birthDate">Fecha de Nacimiento:</label>
+            <input type="date" id="birthDate" name="birthDate" required>
+            <label for="age">Edad:</label>
+            <input type="number" id="age" name="age" required>
+            <label for="phone">Teléfono:</label>
+            <input type="text" id="phone" name="phone" required>
+            <label for="address">Dirección:</label>
+            <input type="text" id="address" name="address" required>
+            <label for="medicalHistory">Antecedentes médicos:</label>
+            <textarea id="medicalHistory" name="medicalHistory" required></textarea>
+            <label for="surgicalHistory">Antecedentes Quirúrgicos:</label>
+            <textarea id="surgicalHistory" name="surgicalHistory" required></textarea>
+            <label for="allergies">Alergias:</label>
+            <textarea id="allergies" name="allergies" required></textarea>
+            <label for="medications">Fármacos:</label>
+            <textarea id="medications" name="medications" required></textarea>
+            <label for="previousHospitalizations">Hospitalizaciones Previas:</label>
+            <textarea id="previousHospitalizations" name="previousHospitalizations" required></textarea>
+            <label for="admissionDate">Fecha de Ingreso:</label>
+            <input type="date" id="admissionDate" name="admissionDate" required>
+            <label for="hospitalizationReason">Motivo de Hospitalización:</label>
+            <textarea id="hospitalizationReason" name="hospitalizationReason" required></textarea>
+            <label for="anamnesis">Anamnesis:</label>
+            <textarea id="anamnesis" name="anamnesis" required></textarea>
+            <label for="physicalExam">Examen Físico:</label>
+            <textarea id="physicalExam" name="physicalExam" required></textarea>
+            <label for="bedNumber">Número de Cama:</label>
+            <textarea id="bedNumber" name="bedNumber" required></textarea>
+            <button type="submit">Guardar Paciente</button>
+        </form>
+        <a href="index.html">Volver al Menú</a>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+</html>

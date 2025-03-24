@@ -1,0 +1,252 @@
+header {
+    background-color: #71bed7; /* Celeste */
+    padding: 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+
+}
+.nav {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+header h1 {
+    color: #ffffff; /* Cambia este color al que desees */
+    font-size: 48px;
+    line-height: 90%;
+}
+
+#header-personal-info {
+    flex: 1;
+}
+
+
+.user-info {
+    flex: 1;
+    text-align: right;
+}
+
+.user-info span {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.user-info button {
+    background-color: #00BFFF; /* Celeste */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.user-info button:hover {
+    background-color: #009ACD; /* Un tono más oscuro de celeste */
+}
+
+body {
+    background-color: #f4f4f9; /* Fondo gris claro */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.container-index {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    }    
+
+.left-column-index {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* Columna derecha */
+.right-column-index {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.card-index {
+    width: 95%; /* Ocupa todo el ancho de la columna */
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.left-column {
+    flex: 1 1 30%;
+    max-width: 300px; /* Ancho máximo de la columna izquierda */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Columna derecha */
+.right-column {
+    flex: 1 1 70%;
+    max-width: 900px; /* Ancho máximo de la columna derecha */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.card-index {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.card.full-width {
+    flex: 1 1 100%;
+}
+
+nav {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #00BFFF; /* Celeste */
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="text"], input[type="number"], input[type="date"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #00BFFF; /* Celeste */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #009ACD; /* Un tono más oscuro de celeste */
+}
+
+a {
+    color: #00BFFF; /* Celeste */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li a {
+    display: block;
+    color: #333;
+}
+
+li a:hover {
+    background-color: #f4f4f9;
+}
+
+.discharge-btn {
+    background-color: #ff4d4d; /* Rojo */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.discharge-btn:hover {
+    background-color: #ff1a1a; /* Un tono más oscuro de rojo */
+}

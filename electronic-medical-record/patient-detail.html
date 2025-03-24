@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Paciente</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div id="header-personal-info">
+            <a href="patients.html">Volver a Pacientes Ingresados</a>
+            <a href="index.html">Volver al Menú</a>
+            <p><strong>Nombre:</strong> <span id="fullName"></span></p>
+            <p><strong>RUT:</strong> <span id="rut"></span></p>
+        </div>
+        <nav class="nav">
+            <h1>Ficha de Paciente - Cama <span id="bedNumber"></span></h1>
+        </nav>
+        <div class="user-info">
+            <span id="userName">Usuario: Juan Pérez</span>
+            <span id="userRole">Cargo: Médico</span>
+            <button id="loginButton">Iniciar Sesión</button>
+        </div>
+    </header>
+    <main>
+        <div id="patient-details">
+            <!-- Detalles del paciente -->
+        </div>
+        <div class="card-container">
+            <div class="left-column">
+                <section class="card">
+                    <h2>Datos Personales</h2>
+                    <p><strong>N° Ficha:</strong> <span id="fileNumber"></span></p>
+                    <p><strong>Fecha de Nacimiento:</strong> <span id="birthDate"></span></p>
+                    <p><strong>Edad:</strong> <span id="age"></span></p>
+                    <p><strong>Teléfono:</strong> <span id="phone"></span></p>
+                    <p><strong>Dirección:</strong> <span id="address"></span></p>
+                </section>
+                <section class="card">
+                    <h2>Datos Clínicos</h2>
+                    <p><strong>Antecedentes médicos:</strong> <span id="medicalHistory"></span></p>
+                    <p><strong>Antecedentes Quirúrgicos:</strong> <span id="surgicalHistory"></span></p>
+                    <p><strong>Alergias:</strong> <span id="allergies"></span></p>
+                    <p><strong>Fármacos:</strong> <span id="medications"></span></p>
+                    <p><strong>Hospitalizaciones Previas:</strong> <span id="previousHospitalizations"></span></p>
+                </section>
+                <section class="card">
+                    <h2>Hospitalización Actual</h2>
+                    <p><strong>Fecha de Ingreso:</strong> <span id="admissionDate"></span></p>
+                    <p><strong>Motivo de Hospitalización:</strong> <span id="hospitalizationReason"></span></p>
+                    <p><strong>Anamnesis:</strong> <span id="anamnesis"></span></p>
+                    <p><strong>Examen Físico:</strong> <span id="physicalExam"></span></p>
+                    <p><strong>Número de Cama:</strong> <span id="bedNumber"></span></p>
+                </section>
+            </div>
+            <div class="right-column">
+                <section class="card">
+                    <h2>Exámenes</h2>
+                    <ul id="exams-list">
+                        <!-- Lista de exámenes -->
+                    </ul>
+                    <form id="new-exam-form">
+                        <label for="exam">Nuevo Examen:</label>
+                        <input type="text" id="exam" name="exam" required>
+                        <button type="submit">Agregar Examen</button>
+                    </form>
+                </section>
+                <section class="card">
+                    <h2>Interconsultas</h2>
+                    <ul id="consults-list">
+                        <!-- Lista de interconsultas -->
+                    </ul>
+                </section>
+                <section class="card">
+                    <h2>Notas de Enfermería</h2>
+                    <ul id="nurse-notes-list">
+                        <!-- Lista de notas de enfermería -->
+                    </ul>
+                </section>
+            </div>
+            <section class="card full-width">
+                <h2>Evoluciones</h2>
+                <ul id="evolutions-list">
+                    <!-- Lista de evoluciones -->
+                </ul>
+                <form id="new-evolution-form">
+                    <label for="evolution">Nueva Evolución:</label>
+                    <textarea id="evolution" name="evolution" required></textarea>
+                    <button type="submit">Agregar Evolución</button>
+                </form>
+            </section>
+        </div>
+        <a href="patients.html">Volver a Pacientes Ingresados</a>
+        <a href="index.html">Volver al Menú</a>
+
+        <button onclick="window.print()">Imprimir</button>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+</html>
