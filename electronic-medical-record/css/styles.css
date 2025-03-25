@@ -1,20 +1,37 @@
+/* Asegúrate de que los divs estén ocultos por defecto */
+.toggle {
+    display: none;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
 header {
     background-color: #71bed7; /* Celeste */
     padding: 20px;
+    text-align: center;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 8px;
-
 }
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .nav {
     flex: 2;
     display: flex;
     justify-content: center;
 }
-
 
 .logo {
     width: 50px;
@@ -30,8 +47,14 @@ header h1 {
 
 #header-personal-info {
     flex: 1;
+    margin-top: 20px;
+    text-align: left;
+    font-size: 16px;
 }
 
+#header-personal-info p {
+    margin: 5px 0;
+}
 
 .user-info {
     flex: 1;
@@ -92,7 +115,7 @@ main {
     flex-wrap: wrap;
     gap: 10px;
     width: 100%;
-    }    
+    }
 
 .left-column-index {
     flex: 1;
@@ -133,8 +156,6 @@ main {
     flex-direction: column;
     gap: 20px;
 }
-
-
 
 .card {
     background-color: #ffffff;

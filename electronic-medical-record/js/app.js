@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const patientList = document.getElementById('patient-list');
     const newPatientForm = document.getElementById('new-patient-form');
     const newEvolutionForm = document.getElementById('new-evolution-form');
-    const newExamForm = document.getElementById('new-exam-form');
     const patientDetails = document.getElementById('patient-details');
 
     // Recuperar pacientes del almacenamiento local
@@ -36,9 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 hospitalizationReason: e.target.hospitalizationReason.value,
                 anamnesis: e.target.anamnesis.value,
                 physicalExam: e.target.physicalExam.value,
-                bedNumber: e.target.bedNumber.value,
-                evolutions: [],
-                exams: []
+                evolutions: []
             };
             patients.push(newPatient);
             // Guardar pacientes en el almacenamiento local
@@ -62,19 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const timestamp = new Date().toLocaleString();
             const patientIndex = new URLSearchParams(window.location.search).get('index');
             patients[patientIndex].evolutions.push({ text: evolution, timestamp });
-            // Guardar pacientes en el almacenamiento local
-            localStorage.setItem('patients', JSON.stringify(patients));
-            renderPatientDetails(patients[patientIndex]);
-        });
-    }
-
-    if (newExamForm) {
-        newExamForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const exam = e.target.exam.value;
-            const timestamp = new Date().toLocaleString();
-            const patientIndex = new URLSearchParams(window.location.search).get('index');
-            patients[patientIndex].exams.push({ text: exam, timestamp });
             // Guardar pacientes en el almacenamiento local
             localStorage.setItem('patients', JSON.stringify(patients));
             renderPatientDetails(patients[patientIndex]);
@@ -119,7 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('hospitalizationReason').textContent = patient.hospitalizationReason;
         document.getElementById('anamnesis').textContent = patient.anamnesis;
         document.getElementById('physicalExam').textContent = patient.physicalExam;
-        document.getElementById('bedNumber').textContent = patient.bedNumber;
 
         const evolutionsList = document.getElementById('evolutions-list');
         evolutionsList.innerHTML = '';
@@ -128,13 +111,15 @@ document.addEventListener('DOMContentLoaded', () => {
             li.innerHTML = `<strong>${evolution.timestamp}:</strong> ${evolution.text}`;
             evolutionsList.appendChild(li);
         });
-
-        const examsList = document.getElementById('exams-list');
-        examsList.innerHTML = '';
-        patient.exams.forEach(exam => {
-            const li = document.createElement('li');
-            li.innerHTML = `<strong>${exam.timestamp}:</strong> ${exam.text}`;
-            examsList.appendChild(li);
+    }
+    function desplegable() {
+        const divs = document.querySelectorAll('.dropdown .card-index .toggle');
+        divs.forEach(div => {
+            if (div.style.display === 'none' || div.style.display === '') {
+                div.style.display = 'block';
+            } else {
+                div.style.display = 'none';
+            }
         });
     }
 });
