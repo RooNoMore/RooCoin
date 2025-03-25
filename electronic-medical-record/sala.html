@@ -25,3 +25,63 @@
     </main>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospitalizados</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        // Simulación de datos de camas por sala
+        const camasPorSala = {
+            1: ['Cama 1', 'Cama 2', 'Cama 3'],
+            2: ['Cama 4', 'Cama 5', 'Cama 6'],
+            3: ['Cama 7', 'Cama 8', 'Cama 9']
+        };
+
+        // Función para obtener el parámetro de la URL
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Función para mostrar la lista de camas en el main
+        function mostrarCamas() {
+            const salaId = getQueryParam('sala');
+            const camas = camasPorSala[salaId] || [];
+            const mainElement = document.querySelector('main');
+
+            const camasList = document.createElement('ul');
+            camas.forEach(cama => {
+                const listItem = document.createElement('li');
+                listItem.textContent = cama;
+                camasList.appendChild(listItem);
+            });
+
+            mainElement.appendChild(camasList);
+        }
+
+        // Ejecutar la función cuando la página se haya cargado
+        window.onload = mostrarCamas;
+    </script>
+</head>
+<body>
+    <header>
+        <div id="header-personal-info">
+            <a href="patients.html">Volver a Pacientes Ingresados</a>
+            <a href="index.html">Volver al Menú</a>
+        </div>
+        <nav class="nav">
+            <h1>Unidad: ______</h1>
+        </nav>
+        <div class="user-info">
+            <span id="userName">Usuario: Juan Pérez</span>
+            <span id="userRole">Cargo: Médico</span>
+            <button id="loginButton">Iniciar Sesión</button>
+        </div>
+    </header>
+    <main>
+        <!-- Aquí se mostrará la lista de camas -->
+    </main>
+</body>
+</html>
